@@ -1,9 +1,8 @@
 const express = require('express')
+const routes = require('./routes')
 
 const server = express()
 
-server.get('/', (req, res) => {
-  res.send('Hello world')
-})
+server.use(routes)
 
 server.listen(3333, () => console.log('Server On'))
