@@ -1,10 +1,11 @@
-const express = require('express')
+import express from 'express'
+import { DevController, LikeController, DislikeController } from './controllers'
 
 const routes = express.Router()
 
+routes.get('/devs', DevController.index)
+routes.post('/devs', DevController.store)
+routes.post('/devs/:devId/likes', LikeController.store)
+routes.post('/devs/:devId/dislikes', DislikeController.store)
 
-routes.get('/', (req, res) => {
-  res.send('Hello world')
-})
-
-module.exports = routes
+export default routes
