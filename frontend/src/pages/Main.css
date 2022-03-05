@@ -64,3 +64,13 @@
   transform: translateY(-5px);
   transition: all 0.2s;
 }
+
+.main-container .empty {
+  font-size: 32px;
+  color: #999;
+  font-weight: bold;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
